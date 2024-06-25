@@ -6,22 +6,12 @@ import { button as buttonStyles } from "@nextui-org/theme";
 import { siteConfig } from "@/config/site";
 import { title, subtitle } from "@/components/primitives";
 import { GithubIcon } from "@/components/icons";
+import { Counter } from "@/components/counter";
+import { Cards } from "@/components/card";
 
 export default function Home() {
   return (
     <section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10">
-      <div className="inline-block max-w-lg text-center justify-center">
-        <h1 className={title()}>Make&nbsp;</h1>
-        <h1 className={title({ color: "violet" })}>beautiful&nbsp;</h1>
-        <br />
-        <h1 className={title()}>
-          websites regardless of your design experience.
-        </h1>
-        <h2 className={subtitle({ class: "mt-4" })}>
-          Beautiful, fast and modern React UI library.
-        </h2>
-      </div>
-
       <div className="flex gap-3">
         <Link
           isExternal
@@ -44,12 +34,13 @@ export default function Home() {
         </Link>
       </div>
 
-      <div className="mt-8">
-        <Snippet hideCopyButton hideSymbol variant="flat">
-          <span>
-            Get started by editing <Code color="primary">app/page.tsx</Code>
-          </span>
-        </Snippet>
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        <Cards name="香煎牛排" source="https://letsplay.tw/wp-content/uploads/20190722215136_6.jpg" />
+        <Cards name="清蒸八爪" source="https://letsplay.tw/wp-content/uploads/2024/06/1P6A2678.jpg" />
+        <Cards name="满汗全席" source="https://letsplay.tw/wp-content/uploads/2024/06/1P6A4325.jpg" />
+        <Cards name="满汗全席" source="https://letsplay.tw/wp-content/uploads/2024/06/1P6A4325.jpg" />
+        <Cards name="满汗全席" source="https://letsplay.tw/wp-content/uploads/2024/06/1P6A4325.jpg" />
+        <Cards name="满汗全席" source="https://letsplay.tw/wp-content/uploads/2024/06/1P6A4325.jpg" />
       </div>
     </section>
   );
